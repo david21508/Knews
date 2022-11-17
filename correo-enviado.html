@@ -36,48 +36,59 @@
         display: grid;
         grid-template-rows: auto 1fr auto;
         width: 300px;
+        justify-items: center;
       }
 
       .logo {
         width: 100px;
         height: 100px;
-        margin-bottom: 48px;
         margin-top: 10px;
+        margin-bottom: 48px;
         justify-self: center;
         display: none;
       }
 
-      .form {
-        display: flex;
-        flex-direction: column;
-      }
-
-      .form a {
-        color: var(--interactive-green);
-        font-size: var(--s);
-        text-align: center;
-        text-decoration: none;
-        margin-bottom: 52px;
-      }
-
-      .label {
-        font-size: var(--s);
-        font-weight: bold;
-        margin-bottom: 4px;
-      }
-
-      .input {
-        background-color: var(--text-input-field);
-        border: none;
-        border-radius: 8px;
-        height: 30px;
-        font-size: var(--m);
-        padding: 6px;
+      .title {
+        font-size: var(--l);
         margin-bottom: 12px;
+        text-align: center;
       }
 
-      .input-email {
-        margin-bottom: 22px;
+      .subtitle {
+        color: var(--light-pink);
+        font-size: var(--m);
+        font-weight: 300;
+        margin-top: 0;
+        margin-bottom: 32px;
+        text-align: center;
+      }
+
+      .email-image {
+        width: 132px;
+        height: 132px;
+        border-radius: 50%;
+        background-color: var(--text-input-field);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 24px;
+      }
+
+      .email-image img {
+        width: 80px;
+      }
+
+      .resend {
+        font-size: var(--s);
+      }
+
+      .resend span {
+        color: var(--light-pink);
+      }
+
+      .resend a {
+        color: var(--interactive-green);
+        text-decoration: none;
       }
 
       .primary-button {
@@ -85,18 +96,6 @@
         border-radius: 8px;
         border: none;
         color: var(--white);
-        width: 100%;
-        cursor: pointer;
-        font-size: var(--m);
-        font-weight: bold;
-        height: 50px;
-      }
-
-      .secondary-button {
-        background-color: var(--white);
-        border-radius: 8px;
-        border: 1px solid var(--interactive-green);
-        color: var(--interactive-green);
         width: 100%;
         cursor: pointer;
         font-size: var(--m);
@@ -121,18 +120,19 @@
       <div class="form-container">
         <img src="./imgs/logo.png" alt="logo" class="logo">
 
-        <form action="/" class="form">
-          <label for="email" class="label">correo electrónico</label>
-          <input type="text" id="email" placeholder="correo@ejemplo.com" class="input input-email">
+        <h1 class="title">¡el correo ha sido enviado!</h1>
+        <p class="subtitle">revisa tu bandeja de entrada y sigue los pasos para restuarar tu contraseña</p>
 
-          <label for="password" class="label">contraseña</label>
-          <input type="password" id="password" placeholder="*********" class="input input-password">
+        <div class="email-image">
+          <img src="./imgs/email.png" alt="email">
+        </div>
 
-          <a href="index.html"><input type="button" value="iniciar sesión" class="primary-button login-button"></a>
-          <a href="correo-enviado.html">¡up! Olvidé mi contraseña</a>
-        </form>
+        <button class="primary-button login-button">ir al correo</button>
 
-        <a href="crear-cuenta.html"><input type="button" value="resgistrate" class="secondary-button signup-button"></a>
+        <p class="resend">
+          <span>¿no recibiste ningún correo?</span>
+          <a href="/">Reenviar</a>
+        </p>
       </div>
     </div>
   </body>
