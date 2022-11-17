@@ -28,6 +28,7 @@
       .login {
         width: 100%;
         height: 100vh;
+        margin-top: 10px;
         display: grid;
         place-items: center;
       }
@@ -42,7 +43,6 @@
         width: 100px;
         height: 100px;
         margin-bottom: 48px;
-        margin-top: 10px;
         justify-self: center;
         display: none;
       }
@@ -108,7 +108,7 @@
         margin-top: 14px;
         margin-bottom: 30px;
       }
-      
+
       @media (max-width: 640px) {
         .logo {
           display: block;
@@ -122,17 +122,20 @@
         <img src="./imgs/logo.png" alt="logo" class="logo">
 
         <form action="/" class="form">
+          <label for="password" class="label">nombre de usuario</label>
+          <input type="text" id="username" placeholder="tunombre" class="input input-password">
+
           <label for="email" class="label">correo electrónico</label>
           <input type="text" id="email" placeholder="correo@ejemplo.com" class="input input-email">
 
           <label for="password" class="label">contraseña</label>
           <input type="password" id="password" placeholder="*********" class="input input-password">
 
-          <a href="index.html"><input type="button" value="iniciar sesión" class="primary-button login-button"></a>
-          <a href="correo-enviado.html">¡up! Olvidé mi contraseña</a>
-        </form>
+          <label for="password" class="label">confirmar contraseña</label>
+          <input type="password" id="confirm-pasword" placeholder="*********" class="input input-password">
 
-        <a href="crear-cuenta.html"><input type="button" value="resgistrate" class="secondary-button signup-button"></a>
+          <a href="verificar-email.html"><input type="button" value="resgistrarse" class="primary-button login-button"></a>
+        </form>
       </div>
     </div>
   </body>
